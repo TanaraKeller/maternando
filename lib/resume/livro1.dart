@@ -6,6 +6,9 @@ class Livro1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const CircularProgressIndicator(
+      color: Colors.pink,
+    );
     return Material(
       type: MaterialType.transparency,
       child: Container(
@@ -42,8 +45,7 @@ class Livro1 extends StatelessWidget {
                 ),
                 child: TextButton(
                   onPressed: openURL,
-                  child: const Text('Quero Comprar', style: TextStyle(
-                      color: Colors.white, fontSize: 18)),
+                  child: const Text('Quero Comprar', style: TextStyle(color: Colors.white, fontSize: 18)),
                 ),
               ),
             ],
@@ -53,9 +55,9 @@ class Livro1 extends StatelessWidget {
     );
   }
 
-
   void openURL() async {
-    const url = 'https://www.amazon.com.br/linguagens-amor-das-crian%C3%A7as-Compromisso/dp/8543302536/ref=sr_1_1?keywords=as+5+linguagens+do+amor+das+crian%C3%A7as&qid=1687996665&s=books&sprefix=as+5+linguagens+do+amor+das+%2Cstripbooks%2C331&sr=1-1';
+    const url =
+        'https://www.amazon.com.br/linguagens-amor-das-crian%C3%A7as-Compromisso/dp/8543302536/ref=sr_1_1?keywords=as+5+linguagens+do+amor+das+crian%C3%A7as&qid=1687996665&s=books&sprefix=as+5+linguagens+do+amor+das+%2Cstripbooks%2C331&sr=1-1';
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     } else {

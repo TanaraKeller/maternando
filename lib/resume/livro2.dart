@@ -6,6 +6,9 @@ class Livro2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const CircularProgressIndicator(
+      color: Colors.pink,
+    );
     return Material(
       type: MaterialType.transparency,
       child: Container(
